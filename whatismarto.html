@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #output {
+            margin-top: 20px;
+            white-space: pre-wrap; /* Preserve whitespace and line breaks */
+        }
+    </style>
+</head>
+<body>
+    <button id="mainButton">marto is not w rizzz ohio!</button>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('mainButton').addEventListener('click', function() {
+            const frBroButton = document.createElement('button');
+            frBroButton.textContent = 'fr bro';
+            frBroButton.addEventListener('click', function() {
+                const outputDiv = document.getElementById('output');
+                for (let i = 0; i < 100; i++) {
+                    outputDiv.textContent += 'fr tho\n';
+                }
+            });
+            document.body.appendChild(frBroButton);
+        });
+    </script>
+</body>
+</html>
